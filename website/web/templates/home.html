@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% block content %}
+<div style="width:100%;height: 30px;background-color: aliceblue;"> 
+	<navbar style="background-color: black;margin: 1000px 50px 10px 50px; color: white;">
+	<div style="width: 100%;height: 40px;background-color: black;color:white;font-size: 20px;text-align: center;"> 
+<button style="background-color: white;"><a href="home" style="text-decoration: none;">HOME </a></button>
+
+<button style="background-color: white;"><a href="post" style="text-decoration: none;color: black;">POST </a></button>
+<span style="margin-left:5%;">HELLO,{{user.username}}</span>
+<span style="margin-left: 40%;">
+<a href="logout" style="text-decoration: none;color: white;">LOGOUT</a>
+</span>
+</navbar>
+</div>
+</div>
+<br>
+<br>		
+<div style="text-align:center;margin-left:30%;margin-right: 30%;">
+	<h1 style="font-size: 40px;">POSTS</h1>
+	<p>
+		{% for p in POST %}
+		<div style="text-align:center;width: 100%;background-color: aliceblue; border: 1px red solid;border-radius: 10px;border-collapse: collapse;">
+		<h2>{{p.title}}</h2>
+		<h4>{{p.description}}</h4>
+		<h6>{{p.created_on}}</h6>
+		<br>
+		</div>
+		<div style="margin-top: 1%;"></div>
+		{% endfor %}		
+	</p>
+</div>
+{% endblock %}margin-left:25%

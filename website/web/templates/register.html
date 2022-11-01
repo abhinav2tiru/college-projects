@@ -1,0 +1,38 @@
+{%block content%}
+<style type="text/css">
+body{
+	background-color: aliceblue;
+}
+	input{
+		width: 40%;
+		padding: 10px;
+		line-height: 20px;
+		
+	}
+</style>
+<div style="margin-top:15%;margin-right:25%;margin-left: 25%;">
+<div style="text-align: center;width: 100%;">
+<div style="border:1px red solid;border-radius: 40px;background-color: whitesmoke;">
+	<form method="post" action="register" >
+		{% csrf_token %}
+		{{form}}
+		<h4><input type="text" name="USERNAME" placeholder="USERNAME"></h4>
+		<h4><input type="text" name="FIRSTNAME" placeholder="FIRSTNAME"></h4>
+		<h4><input type="text" name="LASTNAME" placeholder="LASTNAME"></h4>
+		<h4><input type="text" name="PASSWORD1" placeholder="PASSWORD1"></h4>
+		<h4><input type="text" name="PASSWORD2" placeholder="CONFIRM AGAIN"></h4>
+		<h4><input type="text" name="EMAIL" placeholder="EMAIL"></h4><br>
+		<h5><input type="submit" value="SUBMIT"></h5>
+	</form>
+</div>
+	{% for mess in messages %}
+		<h1>{{mess}}</h1> 
+	{% endfor %}
+	<style type="text/css">
+		input{
+			height: 30px;
+		}
+	</style>
+</div>
+</div>
+{% endblock %} 

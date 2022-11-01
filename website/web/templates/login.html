@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+	body{
+		background-color: aliceblue;
+	}
+	input{
+		padding: 5px;
+	}
+</style>
+<div>
+	
+<div style="text-align: center;margin-top: 10%;margin-left: 30%;margin-right: 30%;">
+<div style=" border-color: black;border-width: 1px;background-color: #dcfff0;border-style: solid;width: 80%;text-align: center;margin-left: 10%;border-radius: 50px;">
+	<form method="post" clss="form-group" action="\">
+		<br><br>
+		{% csrf_token %}
+		<h1>LOGIN</h1>
+		<h2><input type="text" name="USERNAME" placeholder="USERNAME "> </h2>
+		<h2><input type="text" name="PASSWORD" placeholder="PASSWORD"> </h2>
+		<br>
+		<h4><input type="submit" name="submit" style="width=50%;"></h4>
+		<h5>Dont have an account.<br> Click <a href="register">here</a> to Register</h5> 
+		<br>
+	</form>
+	</div>
+</div>
+</div>
+<div>
+	
+</div>
+
+{% endblock %}

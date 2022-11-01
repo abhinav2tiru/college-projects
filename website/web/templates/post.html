@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="margin-top: 15%;margin-left: 25%;margin-right: 25%;text-align: center;">
+	<div style="border: 2px red solid;border-radius: 30px;background-color: aliceblue;">
+<form method="post" action="post">
+	<br><br>
+	{% csrf_token %}
+	<h1 style="color:darkblue;">POST</h1>
+<h3><p><input type="text" name="TITLE" placeholder="TITLE" style="width:50%;"></p></h3>
+<h3><p><textarea placeholder= "DESCRIPTION" name="DESCRIPTION" id="DESCRIPTION"style="width: 50%;height: 200px;"></textarea></p></h3>
+<h4><input type="submit" name="submit"></h4>
+<br>
+<br>	
+</form>
+</div>
+</div>
+<br>
+<div style="text-align:center;">
+	{% for mes in messages %}
+	<h3>{{mes}}</h3>
+	{% endfor %}
+</div>
+<br>
+{% endblock %}
